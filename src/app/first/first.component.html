@@ -1,0 +1,171 @@
+<div class="py-3">
+  <div class="container sub-container">
+    <div class="row">
+      <div class="col-md-8  ">
+        <div class="card " style="min-width:100%;height: 480px;background-color: #1ABC9C">
+          <div class="card-block">
+            <h4 class="card-title" style="color: white">Camera</h4><hr>
+            
+              
+                  
+                  <div  class="iframe-container">
+                      <iframe  src="http://localhost:5000/" allow="geolocation; microphone; camera" ></iframe>
+                  </div>
+                  
+                 <br>
+                
+                <strong style="text-align: center">   Camera 1</strong>
+              
+              <!-- <div>
+                <img src="../assets/images/user.png" alt="Sample photo">
+                <strong>Image2</strong>
+              </div>
+              <div>
+                <img src="../assets/images/user2.png" alt="Sample photo">
+                <strong>Image3</strong>
+              </div>
+              <div>
+                <img src="../assets/images/user.png" alt="Sample photo">
+                <strong>Image4</strong>
+              </div>
+              <div>
+                <img src="../assets/images/user2.png" alt="Sample photo">
+                <strong>Image5</strong>
+              </div>
+              <div>
+                <img src="../assets/images/user2.png" alt="Sample photo">
+                <strong>Image6</strong>
+              </div> -->
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-lg-4">
+        <div class="card" style="min-width:100%;background-color: #1ABC9C">
+          <div class="card-block" style="background-color: #1ABC9C">
+            <h4 class="text-center" style="color: white"> Alarm Control</h4>
+            <hr>
+            <h5 class="text-center" style="background-color: black;color: white"><i class="fas fa-bell 5x">  Alarm Status</i></h5>
+          </div>
+          <br>
+          <div class="custom-control custom-switch text-center">
+           Off
+            <label class="switch">
+              <input type="checkbox" [(ngModel)]="triggeralarm" (click)="checkboxToggle('triggeralarm')">
+              <span class="slider round"></span>
+            </label>
+            On
+          </div>
+          <br>
+        </div>
+        <hr>
+        <!-- <div class="card" style="min-width:100%;background-color: #1ABC9C">
+            <div class="card-block" style="background-color: #1ABC9C">
+              <h4 class="text-center" style="color: white"> Camera Control</h4>
+              <hr>
+              <label>Camera URL :</label>
+              <input type="text" class="form-control" placeholder="Enter URL here">
+            </div>
+            
+            <div class="custom-control custom-switch text-center">
+              <span class="text-center">
+              <button  mat-raised-button color="primary" style="color: white;background-color: black;margin-bottom: 5px" ><i class="fas fa-camera"></i>  Add camera</button>
+              </span>
+              
+            </div>
+            <br>
+          </div> -->
+          <div class="card" style="min-width:100%;background-color: #1ABC9C">
+            <div class="card-block" style="background-color: #1ABC9C">
+              <h4 class="text-center" style="color: white"> Alert Control</h4>
+              <hr>
+              <h4 class="text-center" style="background-color: black;color: white"><i class="fas fa-envelope 5x"></i> Alert Status</h4>
+            </div>
+            <br>
+            <div class="custom-control custom-switch text-center">
+              Off
+              <label class="switch"  >
+                <input  type="checkbox" [(ngModel)]="notification" (click)="checkboxToggle('notification')" >
+                <span class="slider round"></span>
+
+                
+              </label>
+              On
+              
+            </div>
+
+           
+            <br>
+          </div>
+          <br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-sm-6 col-lg-4">
+         <div class="card" style="min-width:100%;background-color: #1ABC9C">
+            <div class="card-block" style="background-color: #1ABC9C;padding: 2px;margin: 1.5px;margin-top: 8px">
+              <h4 class="text-center" style="color: white">System Monitor</h4>
+              <hr>
+              
+            </div> 
+                              <div style="background:darkgray; margin: 5px;margin-bottom: 20px" class="custom-control custom-switch text-center">
+                      <div class="col-md-8">
+                          <h4>Memory</h4>
+                          <canvas id="mChart" width="400" height="400"></canvas>
+                          <br>
+                      </div>
+              
+                  
+              </div>
+    
+            
+           
+              
+          </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-lg-4">
+        <div class="card" style="min-width:100%;background-color: #1ABC9C">
+           <div class="card-block" style="background-color: #1ABC9C;padding: 2px;margin: 1.5px;margin-top: 8px">
+             <h4 class="text-center" style="color: white">System Monitor</h4>
+             <hr>
+            </div>
+          
+                <div style="background:darkgray;margin: 5px;margin-bottom: 18px" class="custom-control custom-switch text-center">
+                    <div class="col-md-8">
+                      <h4>Cpu Load Average</h4>
+                      <canvas id="cChart"  width="400" height="400"></canvas>
+                  </div>
+              </div>
+         
+
+           
+           
+          
+             
+         </div>
+     </div>
+     <div class="col-md-4 col-sm-6 col-lg-4">
+      <div class="card" style="min-width:100%;background-color: #1ABC9C">
+         <div class="card-block" style="background-color: #1abc9c">
+           <h4 class="text-center" style="color: white">Recently Deteced </h4>
+           <hr>
+           
+              
+              <img style="width: 100%; height: 33%;" [src]="lastImg" />
+          
+         
+         
+        
+           
+       </div>
+   </div>
+   </div>
+    
+    
+  </div>
+</div>
+
+
+
+
+

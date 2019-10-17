@@ -1,0 +1,155 @@
+<div class="py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="card" style="min-width:100%;background-color: #1ABC9C">
+          <div class="card-block">
+            <h4 class="card-title text-center" style="color: white">
+              User Profile
+            </h4>
+            <hr />
+            <div class="form-group form-inline ">
+              <label style="color: white">Name :</label>
+              <i class="fa fa-user icon " style="background-color: #485B6E"></i>
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                autocomplete="false"
+                [(ngModel)]="currentUser"
+                required
+                placeholder="valied name"
+                pattern="[A-Za-z]{20}"
+              />
+
+              <label style="color: white">Email address :</label>
+              <i
+                class="fa fa-envelope icon"
+                style="background-color: #485B6E"
+              ></i>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                [(ngModel)]="currentEmail"
+                required
+                placeholder="example@abc.com"
+                pattern="(?!test@test\.com$)[a-z0-9._%+-]{3,}@[a-z]{3,}\.[a-z]{2,}(?:\.[a-z]{2,})?"
+              />
+
+             
+            </div>
+            
+            <div class="form-group form-inline">
+              
+              <label style="color: white">Mobile :</label>
+              <i
+                class="fa fa-phone icon"
+                style="background-color: #485B6E; "
+              ></i>
+              <input
+                type="text"
+                id="phone"
+                class="form-control"
+                [(ngModel)]="currentPhone"
+                required
+                placeholder="07x xxx xxxx"
+                pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxlength="12"
+              />
+            </div>
+            <span>
+              <button
+                mat-raised-button
+                color="warn"
+                type="button"
+                style="float: right;margin: 10px"
+                (click)="refresh()"
+              >
+                <i class="fas fa-ban"></i> Cancle
+              </button>
+              <button
+                mat-raised-button
+                color="primary"
+                type="button"
+                style="float: right;margin: 10px"
+                (click)="UpdateRecord()"
+                [disabled]="!currentUser || !currentEmail || !currentPhone"
+              >
+                <i class="fas fa-user-plus"></i> Update
+              </button>
+            </span>
+          </div>
+          <div class="card-block">
+            <h4 class="card-title text-center" style="color: white">
+              Change Password
+            </h4>
+            <hr>
+            <div class="form-group form-inline">
+              <label style="color: white">Current Password :</label>
+              <i
+                class="fa fa-unlock-alt icon"
+                style="background-color: #485B6E"
+              ></i>
+              <input
+                type="password"
+                class="form-control"
+                autocomplete="false"
+                placeholder="Enter Current Password"
+                [(ngModel)]="oldpassword"
+              />
+
+              <label style="color: white">New Password :</label>
+              <i class="fa fa-key icon" style="background-color: #485B6E"></i>
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Enter New Password"
+                maxlength="10"
+                size="10"
+                [(ngModel)]="newpassword"
+              />
+            </div>
+            <div class="form-group form-inline">
+              
+              <label style="color: white">Confirm Pasword:</label>
+              <i
+                class="fa fa-check-circle icon"
+                style="background-color: #485B6E"
+              ></i>
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Enter New Password Again"
+                maxlength="10"
+                size="10"
+                [(ngModel)]="newpasswordconfirmation"
+              />
+            </div>
+            <span>
+              <button
+                mat-raised-button
+                color="warn"
+                type="button1"
+                style="float: right;margin: 10px"
+                (click)="refresh()"
+              >
+                <i class="fas fa-ban"></i> Cancle
+              </button>
+              <button
+                mat-raised-button
+                color="primary"
+                type="buttonpasswordchange"
+                style="float: right;margin: 10px"
+                (click)="ChangePassword()"
+                [disabled]="!oldpassword || !newpassword || !newpasswordconfirmation"
+              >
+                <i class="fas fa-user-plus"></i> Change Password
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,108 @@
+<div class="py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="card" style="min-width:90%;background-color: #1ABC9C">
+          <div class="card-block">
+            <h4 class="card-title text-center" style="color: white">Images</h4>
+            <div style="overflow-y:auto; overflow-x: auto">
+              <table fixed-header>
+                <tr>
+                  <th style="color: white">Name | Date</th>
+                  <th style="color: white">View Image</th>
+                  <th style="color: white">Remove</th>
+                </tr>
+
+                <tr
+                  *ngFor="
+                    let image of imageData
+                      | async
+                      | paginate
+                        : { id: 'paginate1', itemsPerPage: 7, currentPage: q }
+                  "
+                >
+                  <td>{{ image.imgName }}</td>
+                  <td>
+                    <img
+                      [src]="image.imgUrl"
+                      style="width: 100%; height: 50%;"
+                    />
+                  </td>
+                  <td>
+                    <span>
+                      <button
+                        (click)="RemoveImage(image.id)"
+                        mat-raised-button
+                        color="warn"
+                        [disabled] ="disableRemoveButton"
+                      >
+                        <i class="fas fa-trash-alt"></i> Remove
+                      </button>
+                    </span>
+                  </td>
+                </tr>
+              </table>
+
+              <br />
+              <pagination-controls
+                id="paginate1"
+                style="text-align: center"
+                (pageChange)="q = $event"
+              ></pagination-controls>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="card" style="min-width:90%;background-color: #1ABC9C">
+          <div class="card-block">
+            <h4 class="card-title text-center" style="color: white">Videos</h4>
+            <div style="overflow-x:auto;">
+              <table>
+                <tr>
+                  <th style="color: white">Name</th>
+                  <th style="color: white">Video URL</th>
+
+                  <th style="color: white">Remove</th>
+                </tr>
+
+                <tr
+                  *ngFor="
+                    let video of videoData
+                      | async
+                      | paginate
+                        : { itemsPerPage: 21, currentPage: p, id: 'paginate2' }
+                  "
+                >
+                  <td>{{ video.vidName }}</td>
+                  <td><a [href]="video.videoUrl">Watch >></a></td>
+
+                  <td>
+                    <span>
+                      <button
+                        (click)="RemoveVideo(video.id)"
+                        mat-raised-button
+                        color="warn"
+                        [disabled] ="disableRemoveButton"
+                      >
+                        <i class="fas fa-trash-alt"></i> Remove
+                      </button>
+                    </span>
+                  </td>
+                </tr>
+              </table>
+
+              <br />
+              <pagination-controls
+                id="paginate2"
+                style="text-align: center"
+                (pageChange)="p = $event"
+              ></pagination-controls>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

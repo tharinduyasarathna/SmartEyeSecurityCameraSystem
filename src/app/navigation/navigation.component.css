@@ -1,0 +1,38 @@
+.example-container {
+  height:100%;
+  margin: 0px;
+  background-color: #34495E;
+}
+.mat-toolbar.mat-primary {
+  background: #061800;
+  color: #fff;
+}
+.bs-example{
+  margin: 20px;
+  margin-left:auto !important;
+  margin-right: 0px;
+}
+.navbar-expand-md{
+  background-color: #485b6e;
+  margin-left: auto;
+}
+.mat-drawer {
+  background-color: #485b6e;
+  color: #f8f9fa;
+}
+.bottom-text{
+  text-align: center;
+  color: white;
+  padding: 4px;
+  margin-top: 100%;
+}
+.bs-example[_ngcontent-c1] {
+  margin: 0 !important;
+  margin-left: auto !important;
+}
+.mat-toolbar-row{
+  height: 65px !important;
+  padding-left: 15px !important;
+  padding-right:3px !important;
+  border-radius: 20px !important;
+}

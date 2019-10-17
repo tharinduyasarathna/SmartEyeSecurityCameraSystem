@@ -1,0 +1,84 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button
+      type="button"
+      aria-label="Toggle sidenav"
+      mat-icon-button
+      (click)="drawer.toggle()"
+    >
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <a routerLink="about" class="nav-item nav-link">
+      <h1 style="color: white">
+        &nbsp;&nbsp; &nbsp;SMART EYE <i class="fas fa-eye"></i></h1
+    ></a>
+    <div class="bs-example">
+      <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class=" collapse navbar-collapse justify-content-between">
+          <!-- <form class="form-inline">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search">
+              <div class="input-group-append">
+                <button mat-raised-button color="primary"><i class="fas fa-search"></i></button>
+              </div>
+            </div>
+          </form> -->
+          <div class="navbar-nav">
+            <span><img src="../assets/images/icon1.png"/></span>
+            <a href="#" routerLink="profile" class="nav-item nav-link">{{
+              currentUser
+            }}</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav
+    #drawer
+    mode="side"
+    opened
+    role="navigation"
+    style="min-width: 13%"
+  >
+    <mat-nav-list style="background-color: #485b6e; color: white">
+      <a mat-list-item routerLink="first" style="color: white"
+        ><i class="fas fa-columns"></i> &nbsp;&nbsp;DashBoard</a
+      >
+      <a mat-list-item routerLink="second"  *ngIf="showUserTab" style="color: white"
+        ><i class="fas fa-user"></i> &nbsp;&nbsp;Users</a
+      >
+      <!-- <a mat-list-item routerLink='/setting' style="color: white"><i class="fas fa-cog"></i>  &nbsp;&nbsp;Settings</a> -->
+      <a mat-list-item routerLink="history" style="color: white"
+        ><i class="fas fa-history"></i> &nbsp;&nbsp;History</a
+      >
+      <a mat-list-item routerLink="about" style="color: white"
+        ><i class="fas fa-address-card"></i> &nbsp;&nbsp;About</a
+      >
+      <a (click)="logout()" mat-list-item style="color: white"
+        ><i class="fa fa-user-lock"></i> &nbsp;&nbsp;Logout</a
+      >
+      <br /><br />
+      <div class="bottom-text">
+        <h5 style="color: white"><i class="fas fa-headset"></i> Support</h5>
+        <small>tharindu@gmail.com</small><br />
+        <small>+94715887573</small><br />
+        <small>www.tharindu.com</small><br />
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<!--<mat-drawer-container class="example-container">
+  <mat-drawer #drawer mode="side" opened>
+  <div><lable>
+    <a mat-list-item routerLink='/first'>First Component</a>
+    <a mat-list-item routerLink='/second'>Second Component</a>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>-->

@@ -1,0 +1,151 @@
+<div class="py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="card" style="min-width:100%;background-color: #1ABC9C">
+          <div class="card-block">
+            <h4 class="card-title text-center" style="color: white">
+              Add new User
+            </h4>
+            <hr />
+
+            <div class="form-group form-inline ">
+              <label style="color: white">Name :</label>
+              <i class="fa fa-user icon " style="background-color: #485B6E"></i>
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="name"
+                autocomplete="false"
+                placeholder="Enter Name"
+                required
+                pattern="[A-Za-z]{20}"
+              />
+
+              <label style="color: white">Password :</label>
+              <i class="fa fa-key icon" style="background-color: #485B6E"></i>
+              <input
+                type="password"
+                class="form-control"
+                [(ngModel)]="password"
+                autocomplete="false"
+                placeholder="Password minimum length is 5 indexes "
+                required
+                minlength="5"
+              />
+            </div>
+            <div class="form-group form-inline">
+              <label style="color: white">Role :</label>
+              <i
+                class="fa fa-id-card icon"
+                style="background-color: #485B6E"
+              ></i>
+              <input
+                type="tel"
+                class="form-control"
+                [(ngModel)]="userType"
+                placeholder="Select Role"
+                maxlength="10"
+                size="10"
+                required
+                
+              />
+
+              <label style="color: white">Email address :</label>
+              <i
+                class="fa fa-envelope icon"
+                style="background-color: #485B6E"
+              ></i>
+              <input
+                type="email"
+                class="form-control"
+                [(ngModel)]="email"
+                placeholder="example@abc.com"
+                required
+                pattern="(?!test@test\.com$)[a-z0-9._%+-]{3,}@[a-z]{3,}\.[a-z]{2,}(?:\.[a-z]{2,})?"
+              />
+            </div>
+            <div class="form-group form-inline">
+              <label style="color: white">Mobile :</label>
+              <i
+                class="fa fa-phone icon"
+                style="background-color: #485B6E; "
+              ></i>
+              <input
+                type="text"
+                id="phone"
+                class="form-control"
+                required
+                [(ngModel)]="phone"
+                placeholder="07x xxx xxxx"
+                pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
+                maxlength="12"
+              />
+            </div>
+            <span>
+              <button
+                mat-raised-button
+                color="primary"
+                type="button"
+                style="float: right"
+                (click)="CreateRecord()"
+                [disabled]="!name || !email || !phone || !userType"
+              >
+                <i class="fas fa-user-plus"></i> Add User
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br /><br />
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-12">
+        <div class="card" style="min-width:90%;background-color: #1ABC9C">
+          <div class="card-block">
+            <h4 class="card-title text-center" style="color: white">Users</h4>
+            <hr />
+            <table>
+              <tr>
+                <th style="color: white">First Name</th>
+                <th style="color: white">Role</th>
+                <th style="color: white">E-mail</th>
+                <th style="color: white">Mobile-No</th>
+                <th style="color: white">Remove user</th>
+              </tr>
+
+              <tr
+                *ngFor="
+                  let user of users
+                    | paginate: { itemsPerPage: 5, currentPage: p }
+                "
+              >
+                <td>{{ user.name }}</td>
+                <td>{{ user.userType }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.phone }}</td>
+                <td>
+                  <span>
+                    <button
+                      (click)="RemoveRecord(user.id)"
+                      mat-raised-button
+                      color="warn"
+                    >
+                      <i class="fas fa-trash-alt"></i> Remove
+                    </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+
+            <br />
+            <pagination-controls
+              style="text-align: center"
+              (pageChange)="p = $event"
+            ></pagination-controls>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
