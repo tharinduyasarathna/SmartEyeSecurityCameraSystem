@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import io from 'socket.io-client';
+import * as io from 'socket.io-client';
 import { Chart } from 'chart.js';
 import { AngularFirestore } from '@angular/fire/firestore';
 
