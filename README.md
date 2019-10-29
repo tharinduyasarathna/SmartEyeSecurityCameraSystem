@@ -1,16 +1,16 @@
 # Smart Intelligent Eye Security Camara System
-> Object detection security camera system for home, an intelligent system for capturing, identifying, warning
+ Object detection security camera system for home, an intelligent system for capturing, identifying, warning
 and controlling unauthorized threaten objects or access to the premises.
 
 ## Prerequisites
-> * Angular CLI 6.0.8
-> * Python 3.6 
-> * Node 10.15.1 or higher version
-> * npm 6.4.1 or higher version
-> * Firebase account
-> * NodeMCU ESP8266 board
-> * LED or Buzzer
-> * Web camera
+ * Angular CLI 6.0.8
+ * Python 3.6 
+ * Node 10.15.1 or higher version
+ * npm 6.4.1 or higher version
+ * Firebase account
+ * NodeMCU ESP8266 board
+ * LED or Buzzer
+ * Web camera
 
 ## Deployement
 
