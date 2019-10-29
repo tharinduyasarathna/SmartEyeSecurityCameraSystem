@@ -1,6 +1,10 @@
 # Smart Intelligent Eye Security Camara System
- Object detection security camera system for home, an intelligent system for capturing, identifying, warning
+ * Object detection security camera system for home, an intelligent system for capturing, identifying, warning
 and controlling unauthorized threaten objects or access to the premises.
+<p align="center">
+  <img src="https://github.com/Tharinduyasarathna27/SmartEyeSecurityCameraSystem/blob/master/src/assets/images/1.PNG"  width="720" height="340" >
+</p>
+
 
 ## Prerequisites
  * Angular CLI 6.0.8
@@ -83,3 +87,13 @@ First ensure that python 3.6 , Nodejs and Angular CLI 6.0.8 install on your comp
 >> Finally we can go for the deployment.Open Command prompt in windows and navigate the repo and run **deploymentScript.bat** file.
 
 All modules are now up and running.Please visit your pc http://localhost:4200.
+
+<p>
+  <img src="https://github.com/Tharinduyasarathna27/SmartEyeSecurityCameraSystem/blob/master/src/assets/images/2.PNG"  width="410" height="210" >
+  <img src="https://github.com/Tharinduyasarathna27/SmartEyeSecurityCameraSystem/blob/master/src/assets/images/3.PNG"  width="410" height="210" >
+  <img src="https://github.com/Tharinduyasarathna27/SmartEyeSecurityCameraSystem/blob/master/src/assets/images/4.PNG"  width="410" height="210" >
+  <img src="https://github.com/Tharinduyasarathna27/SmartEyeSecurityCameraSystem/blob/master/src/assets/images/5.PNG"  width="410" height="210" >
+  <p align="center">
+  <img src="https://github.com/Tharinduyasarathna27/SmartEyeSecurityCameraSystem/blob/master/src/assets/images/6.PNG"  width="410" height="210" >
+</p>
+</p>
