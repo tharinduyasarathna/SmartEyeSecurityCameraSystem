@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular6-sidenav-example": {
+    "smart-eye": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular6-sidenav-example",
+            "outputPath": "dist/smart-eye",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -57,18 +57,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular6-sidenav-example:build"
+            "browserTarget": "smart-eye:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular6-sidenav-example:build:production"
+              "browserTarget": "smart-eye:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular6-sidenav-example:build"
+            "browserTarget": "smart-eye:build"
           }
         },
         "test": {
@@ -105,7 +105,7 @@
         }
       }
     },
-    "angular6-sidenav-example-e2e": {
+    "smart-eye-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -113,11 +113,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular6-sidenav-example:serve"
+            "devServerTarget": "smart-eye:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular6-sidenav-example:serve:production"
+              "devServerTarget": "smart-eye:serve:production"
             }
           }
         },
@@ -133,5 +133,5 @@
       }
     }
   },
-  "defaultProject": "angular6-sidenav-example"
+  "defaultProject": "smart-eye"
 }
