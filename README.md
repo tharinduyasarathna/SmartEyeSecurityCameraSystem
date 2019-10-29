@@ -7,6 +7,7 @@ and controlling unauthorized threaten objects or access to the premises.
 
 
 ## Prerequisites
+ * Windows 10 
  * Angular CLI 6.0.8
  * Python 3.6 
  * Node 10.15.1 or higher version
