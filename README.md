@@ -98,3 +98,5 @@ All modules are now up and running.Please visit your pc http://localhost:4200.
   <img src="https://github.com/Tharinduyasarathna27/SmartEyeSecurityCameraSystem/blob/master/src/assets/images/6.PNG"  width="410" height="210" >
 </p>
 </p>
+
+Tharindu Lakshan Yasarathna - SE/2014/056 - University of Kelaniya - Bsc in Software Engineering(Hon's)
