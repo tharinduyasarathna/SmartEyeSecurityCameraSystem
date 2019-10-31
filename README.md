@@ -10,6 +10,7 @@ and controlling unauthorized threaten objects or access to the premises.
  * Windows 10 
  * Angular CLI 6.0.8
  * Python 3.6 
+ * TensorFlow.js
  * Node 10.15.1 or higher version
  * npm 6.4.1 or higher version
  * Firebase account
