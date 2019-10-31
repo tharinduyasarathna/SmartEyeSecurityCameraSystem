@@ -90,6 +90,11 @@ First ensure that python 3.6 , Nodejs and Angular CLI 6.0.8 install on your comp
 
 All modules are now up and running.Please visit your pc http://localhost:4200.
 
+
+**Important** - if sweetalert2 gives error please visit follow link to find my solution : https://github.com/sweetalert2/sweetalert2/issues/1773
+
+
+
 <p>
   <img src="https://github.com/Tharinduyasarathna27/SmartEyeSecurityCameraSystem/blob/master/src/assets/images/2.PNG"  width="410" height="210" >
   <img src="https://github.com/Tharinduyasarathna27/SmartEyeSecurityCameraSystem/blob/master/src/assets/images/3.PNG"  width="410" height="210" >
